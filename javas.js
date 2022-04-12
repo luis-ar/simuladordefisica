@@ -15,3 +15,4 @@ function inicio() {
     paso1.value = "";
     paso2.value = "";
   };
+}
