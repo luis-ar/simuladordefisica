@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="stylus.css">
     
 </head>
-<body> 
+<body onload="inicio()"> 
   <div class="padre">
 
   <h3>Voltaje</h3>
-  <input type="range"> <br> <br>
+  <input type="number" class="voltaje">
+ <br> <br>
   <h3>Resistencia</h3>
-  <input class="principal" type="range" aria-valuemax="100%">
+  <input type="number" class="resistencia">
+  <button class="boton">calcular</button>
+  <button class="datos">Nuevos Datos</button>
+  
   <div class="ventana1">
     <div class="contenedor">
       <div class="pantalla">
-        <h4>Corriente</h4>
+        <h2>Corriente =</h2>
       </div>
+      <div class="prueba"></div>
+      <div class="prueba2"></div>
     </div>
   </div>
  
@@ -26,6 +32,7 @@
     <img  class="logo" src="cilindro.png">
 
   </div>
+
   </div>
   
   
