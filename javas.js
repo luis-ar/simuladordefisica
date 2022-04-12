@@ -6,7 +6,7 @@ let datos = document.querySelector(".datos");
 
 function inicio() {
   let num1;
-  let num2 = 4;
+  let num2;
   num1 = voltaje.textContent;
   num2 = resistencia.textContent;
   boton.onclick = function (e) {
