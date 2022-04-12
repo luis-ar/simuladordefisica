@@ -1,27 +1,17 @@
-let voltaje = document.querySelector(".voltaje");
-let resistencia = document.querySelector(".resistencia");
-let boton = document.querySelector(".boton");
-var pantalla = document.querySelector(".pantalla");
-let datos = document.querySelector(".datos");
-
 function inicio() {
-  let num1;
-  let num2;
-  num1 = voltaje.textContent;
-  num2 = resistencia.textContent;
+  var boton = document.querySelector(".boton");
+  var pantalla = document.querySelector(".pantalla");
+  var datos = document.querySelector(".datos");
+  var paso1 = document.querySelector(".resistencia");
+  var paso2 = document.querySelector(".voltaje");
+
   boton.onclick = function (e) {
-    respuesta();
+    var resistencia = document.querySelector(".resistencia").value;
+    var voltaje = document.querySelector(".voltaje").value;
+    resultado = voltaje / resistencia;
+    pantalla.textContent += resultado;
   };
   datos.onclick = function (e) {
-    limpiar();
+    paso1.value = "";
+    paso2.value = "";
   };
-  function respuesta() {
-    resultado = num1 * num2;
-    pantalla.textContent = "Corriente=" + resultado;
-  }
-  function limpiar() {
-    voltaje.textContent = "";
-    num1 = 0;
-    num2 = 0;
-  }
-}
