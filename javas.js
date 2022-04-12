@@ -14,5 +14,6 @@ function inicio() {
   datos.onclick = function (e) {
     paso1.value = "";
     paso2.value = "";
+    pantalla.textContent = "Corriente=";
   };
 }
