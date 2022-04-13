@@ -76,3 +76,13 @@ body {
   right: -50px;
   bottom: -80px;
 }
+.botones {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.variable {
+  font-size: 25px;
+  width: 50px;
+}
+
