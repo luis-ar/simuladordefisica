@@ -5,8 +5,14 @@
   justify-content: center;
   align-items: center;
   width: 70%;
-  position: absolute;
-  bottom: 500px;
+  position: relative;
+  bottom: 200px;
+}
+.titulo {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: -55px;
+  color: red;
 }
 .imagen {
   display: flex;
@@ -14,7 +20,7 @@
 }
 .logo {
   position: absolute;
-  bottom: 440px;
+  bottom: -60px;
   height: 150px;
   width: 350px;
 }
@@ -26,9 +32,10 @@
   padding-left: 20px;
   font-size: 30px;
   text-align: center;
+  background-color: white;
 }
 body {
-  background-color: blanchedalmond;
+  background-color: rgb(211, 208, 203);
   position: relative;
   overflow: hidden;
 }
@@ -42,7 +49,7 @@ body {
 .prueba {
   width: 120px;
   height: 140px;
-  background-color: green;
+  background-color: rgb(58, 231, 58);
   clip-path: polygon(
     40% 69%,
     28% 71%,
@@ -61,7 +68,7 @@ body {
 .prueba2 {
   width: 120px;
   height: 140px;
-  background-color: green;
+  background-color: rgb(58, 231, 58);
   clip-path: polygon(
     82% 18%,
     100% 17%,
@@ -82,8 +89,105 @@ body {
   display: block;
   margin-top: 10px;
   font-size: 20px;
+  background-color: rgb(127, 219, 255);
+  width: 250px;
+  border: solid 5px black;
 }
 .variable {
   font-size: 25px;
-  width: 50px;
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px 5px red;
+}
+.caja1 {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: -5px;
+  position: absolute;
+  left: 1060px;
+}
+.caja2 {
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 1060px;
+}
+.caja3 {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: -5px;
+  position: absolute;
+  left: 450px;
+}
+.caja4 {
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 450px;
+}
+.caja5 {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: -5px;
+  position: absolute;
+  left: 600px;
+}
+.caja6 {
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 600px;
+}
+.caja7 {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: -5px;
+  position: absolute;
+  left: 750px;
+}
+.caja8 {
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 750px;
+}
+.caja9 {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: -5px;
+  position: absolute;
+  left: 910px;
+}
+.caja10 {
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  left: 910px;
+}
+.subcaja {
+  border: solid 5px black;
+  top: -30px;
+  text-align: center;
 }
