@@ -4,9 +4,13 @@
   padding: 120px;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  position: relative;
-  bottom: 230px;
+  width: 50%;
+  position: fixed;
+  bottom: 100px;
+  right: 80px;
+}
+.datos_usuario {
+  font-size: 25px;
 }
 .imagen {
   display: flex;
@@ -26,7 +30,21 @@
   padding-left: 20px;
   font-size: 30px;
   text-align: center;
-  background-color: white;
+  background-color: red;
+}
+.modificacion {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px 5px red;
+}
+.aparatos {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px 5px red;
 }
 body {
   background-color: rgb(119, 115, 115);
@@ -88,12 +106,19 @@ body {
   border: solid 5px black;
 }
 .variable {
-  font-size: 25px;
+  font-size: 20px;
   width: 80px;
   height: 40px;
   background-color: black;
   color: white;
   box-shadow: 0 0 10px 5px red;
+}
+.voltaje1 {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  top: -35px;
 }
 .caja1 {
   display: inline-block;
@@ -101,85 +126,40 @@ body {
   height: 50px;
   background-color: aqua;
   margin-right: -5px;
-  position: absolute;
-  left: 1060px;
 }
-.caja2 {
-  display: inline-block;
-  width: 10px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  left: 1060px;
-}
+
 .caja3 {
   display: inline-block;
   width: 60px;
   height: 50px;
   background-color: aqua;
   margin-right: -5px;
-  position: absolute;
-  left: 450px;
 }
-.caja4 {
-  display: inline-block;
-  width: 10px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  left: 450px;
-}
+
 .caja5 {
   display: inline-block;
   width: 60px;
   height: 50px;
   background-color: aqua;
   margin-right: -5px;
-  position: absolute;
-  left: 600px;
 }
-.caja6 {
-  display: inline-block;
-  width: 10px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  left: 600px;
-}
+
 .caja7 {
   display: inline-block;
   width: 60px;
   height: 50px;
   background-color: aqua;
   margin-right: -5px;
-  position: absolute;
-  left: 750px;
 }
-.caja8 {
-  display: inline-block;
-  width: 10px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  left: 750px;
-}
+
 .caja9 {
   display: inline-block;
   width: 60px;
   height: 50px;
   background-color: aqua;
   margin-right: -5px;
-  position: absolute;
-  left: 910px;
 }
-.caja10 {
-  display: inline-block;
-  width: 10px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  left: 910px;
-}
+
 .subcaja {
   border: solid 5px black;
   top: -30px;
@@ -205,6 +185,7 @@ body {
   color: black;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, 1px 1px 0 white,
     -1px 1px 0 white;
+  animation: border 2s ease-in-out infinite;
 }
 .wave {
   color: rgb(17, 107, 224);
@@ -224,6 +205,7 @@ body {
       100% 100%,
       0% 100%
     );
+    transform: scale(1);
   }
   50% {
     clip-path: polygon(
@@ -237,5 +219,15 @@ body {
       100% 100%,
       0% 100%
     );
+    transform: scale(0.6);
+  }
+}
+@keyframes border {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
   }
 }
