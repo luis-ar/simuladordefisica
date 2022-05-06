@@ -15,13 +15,23 @@
   <div class="padre">
 
     <div class="ingreso_datos">
-      <h3 style="font-size: 30px;">Voltaje</h3>
-  <input type="number" class="voltaje variable">
- <br> <br>
-  <h3 style="font-size: 30px;">Resistencia</h3>
-  <input type="number" class="resistencia variable">
+      <h3 class="datos_usuario">Escoja el circuito electrico</h3>
+      <select class="circuito-elegida" style="font-size: 20px;">
+        <option value="serie">circuito en serie</option>
+        <option value="paralelo">circuito en paralelo</option>
+        
+      </select>
+      <h3 class="datos_usuario">Ingrese la cantidad de aparatos electronicos</h3>
+      <input type="number" class="aparatos datos_usuario" ><br><br>
+      <button class="confirmar" style="font-size: 20px;background-color:rgb(127, 219, 255);border: solid 5px black;">Confirmar</button>
+      <div class="indicar_resistencia">
+
+      </div>
+     
+      <h3 style="font-size: 30px;">Intensidad</h3>
+  <input type="number" class="intensidad variable">
   <br> <br>
-  <button class="boton botones"  >Calcular Corriente</button>
+  <button class="boton botones"  >Calcular Voltaje</button>
   <br>
   <button class="datos botones" >Nuevos Datos</button>
 
@@ -30,22 +40,13 @@
   <div class="ventana1">
     <div class="contenedor">
       <div class="pantalla">
-        <h2>Corriente =</h2>
+        <h2>Voltaje =</h2>
       </div>
       <div class="prueba"></div>
       <div class="prueba2"></div>
       <img  class="logo" src="cilindro.png">
-      <div>
-        <div class="caja1 subcaja"><H2>V</H2></div>
-        <div class="caja2 subcaja"></div>
-        <div class="caja3 subcaja"><H2>V</H2></div>
-        <div class="caja4 subcaja"></div>
-        <div class="caja5 subcaja"><H2>V</H2></div>
-        <div class="caja6 subcaja"></div>
-        <div class="caja7 subcaja"><H2>V</H2></div>
-        <div class="caja8 subcaja"></div>
-        <div class="caja9 subcaja"><H2>V</H2></div>
-        <div class="caja10 subcaja"></div>
+      <div class="voltaje1">
+      
       </div>
     </div>
   </div>
