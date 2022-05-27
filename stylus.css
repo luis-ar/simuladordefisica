@@ -1,10 +1,10 @@
 .contenedor {
   border: solid 7px black;
   display: flex;
-  padding: 120px;
   justify-content: center;
   align-items: center;
   width: 50%;
+  height: 300px;
   position: fixed;
   bottom: 100px;
   right: 80px;
@@ -33,11 +33,12 @@
   background-color: red;
 }
 .modificacion {
-  width: 80px;
+  width: 200px;
   height: 40px;
   background-color: black;
   color: white;
   box-shadow: 0 0 10px 5px red;
+  margin-right: 55px;
 }
 .aparatos {
   width: 80px;
@@ -229,5 +230,73 @@ body {
   }
   50% {
     transform: scale(0.6);
+  }
+}
+.mas_cajas {
+  border: solid 5px green;
+}
+.cir_paralelo {
+  border: solid 7px black;
+  border-bottom: none;
+  border-top: none;
+  height: auto;
+  padding: 0 0px;
+  width: 50%;
+  position: fixed;
+  bottom: 404px;
+  right: 80px;
+}
+.contenedor111 {
+  width: 100%;
+  height: 80px;
+  border-top: solid 7px rgb(2, 2, 2);
+
+  display: flex;
+
+  justify-content: center;
+}
+.cajita {
+  position: relative;
+  top: -35px;
+}
+.modal {
+  box-sizing: border-box;
+  width: 105%;
+  height: 100%;
+  background-color: rgba(23, 19, 223, 0.7);
+  position: absolute;
+  top: -200px;
+  left: -10px;
+  display: none;
+  opacity: 1;
+}
+.reiniciar {
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  bottom: -20px;
+  left: 35%;
+}
+.muestra_pantalla {
+  position: relative;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  100% {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@keyframes reiniciar {
+  0% {
+    opacity: 0;
+    display: none;
   }
 }
