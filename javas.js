@@ -1,21 +1,22 @@
 function inicio() {
   var boton = document.querySelector(".boton");
   var pantalla = document.querySelector(".pantalla");
-  var datos = document.querySelector(".datos");
-  var paso1 = document.querySelector(".resistencia");
-  var paso2 = document.querySelector(".voltaje");
+  var cir_paralelo = document.querySelector(".cir_paralelo");
   var contenedor = document.querySelector(".contenedor");
   var voltaje1 = document.querySelector(".voltaje1");
   var confirmar = document.querySelector(".confirmar");
   var indicar_resistencia = document.querySelector(".indicar_resistencia");
+  var modal = document.querySelector(".modal");
+  var reiniciar = document.querySelector(".reiniciar");
   confirmar.onclick = function (e) {
     var aparatos = document.querySelector(".aparatos").value;
 
     var a = 1;
     while (a <= aparatos) {
       ingreso_resistores = `
-      <H3 class="datos_usuario">Ingrese la resitencia del aparato ${a}</H3>
-      <input type="number" class="valores_resistencia${a} datos_usuario modificacion">
+      <H3 class="datos_usuario">Ingrese la potencia en watt y el tiempo en horas de uso del aparato ${a}</H3>
+      <input type="number" class="valores_potencia${a} datos_usuario modificacion" placeholder="potencia">
+      <input type="number" class="valores_tiempo${a} datos_usuario modificacion"  placeholder="tiempo">
       `;
       indicar_resistencia.innerHTML += ingreso_resistores;
       a = a + 1;
@@ -26,41 +27,45 @@ function inicio() {
   boton.onclick = function (e) {
     var eleccion = document.querySelector(".circuito-elegida").value;
     var aparatos = document.querySelector(".aparatos").value;
-    var intensidad = document.querySelector(".intensidad").value;
     var x = 1;
-    var resistor_total = 0;
+    var potencia_total = 0;
 
     if (eleccion == "serie") {
       while (x <= aparatos) {
-        resistor_total =
-          resistor_total +
-          parseInt(document.querySelector(`.valores_resistencia${x}`).value);
+        potencia_total =
+          potencia_total +
+          document.querySelector(`.valores_potencia${x}`).value *
+            document.querySelector(`.valores_tiempo${x}`).value;
         resistores = `<div class="caja1 subcaja"><H2>R</H2></div>`;
         voltaje1.innerHTML += resistores;
         x = x + 1;
       }
-      resultado = intensidad * resistor_total;
-      pantalla.textContent += resultado;
-      pantalla.style.textAlign = "center";
-      pantalla.style.paddingTop = "40px";
+      pantalla.textContent += potencia_total;
+      pantalla.style.fontSize = "40px";
+    } else {
+      let n = 1;
+      contenedor.style.borderTop = "none";
+      while (n <= aparatos) {
+        potencia_total =
+          potencia_total +
+          document.querySelector(`.valores_potencia${n}`).value *
+            document.querySelector(`.valores_tiempo${n}`).value;
+        cajas = ` <div class="contenedor111"><div class="caja1 subcaja cajita"><H2>R</H2></div></div>`;
+        cir_paralelo.innerHTML += cajas;
+
+        n++;
+      }
+      pantalla.textContent += potencia_total;
       pantalla.style.fontSize = "40px";
     }
   };
-  datos.onclick = function (e) {
-    pantalla.textContent = " Voltaje= ";
-    pantalla.style.backgroundColor = "red";
-    pantalla.style.textAlign = "center";
-    pantalla.style.paddingTop = "40px";
-    pantalla.style.fontSize = "40px";
+  //otro_evento
+  reiniciar.onclick = function (e) {
+    modal.style.display = "none";
+    modal.style.animation = "reiniciar 2s forwards";
   };
-
-  // function captura() {
-  //   var num1 = document.querySelector(".voltaje").value;
-  //   var num2 = document.querySelector(".resistencia").value;
-  //   resultado = num1 * num2;
-  //   alert(resultado);
-  // }
-  // function limpiar() {
-  //   alert("jjaa");
-  // }
+  boton.onclick = function (e) {
+    modal.style.animation = "aparecer 2s forwards";
+    modal.style.display = "flex";
+  };
 }
