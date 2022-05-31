@@ -42,6 +42,8 @@ function inicio() {
       }
       pantalla.textContent += potencia_total;
       pantalla.style.fontSize = "40px";
+      modal.style.animation = "aparecer 2s forwards";
+      modal.style.display = "flex";
     } else {
       let n = 1;
       contenedor.style.borderTop = "none";
@@ -57,15 +59,13 @@ function inicio() {
       }
       pantalla.textContent += potencia_total;
       pantalla.style.fontSize = "40px";
+      modal.style.animation = "aparecer 2s forwards";
+      modal.style.display = "flex";
     }
   };
   //otro_evento
   reiniciar.onclick = function (e) {
     modal.style.display = "none";
     modal.style.animation = "reiniciar 2s forwards";
-  };
-  boton.onclick = function (e) {
-    modal.style.animation = "aparecer 2s forwards";
-    modal.style.display = "flex";
   };
 }
