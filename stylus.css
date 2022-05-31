@@ -263,9 +263,9 @@ body {
   box-sizing: border-box;
   width: 105%;
   height: 100%;
-  background-color: rgba(23, 19, 223, 0.7);
-  position: absolute;
-  top: -200px;
+  background-color: #20bad8;
+  position: fixed;
+  bottom: 0;
   left: -10px;
   display: none;
   opacity: 1;
