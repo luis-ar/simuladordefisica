@@ -8,13 +8,15 @@ function inicio() {
   var indicar_resistencia = document.querySelector(".indicar_resistencia");
   var modal = document.querySelector(".modal");
   var reiniciar = document.querySelector(".reiniciar");
+  var precio = document.querySelector(".precio");
+  var potencia_pantalla = document.querySelector(".potencia_pantalla");
   confirmar.onclick = function (e) {
     var aparatos = document.querySelector(".aparatos").value;
 
     var a = 1;
     while (a <= aparatos) {
       ingreso_resistores = `
-      <H3 class="datos_usuario">Ingrese la potencia en watt y el tiempo en horas de uso del aparato ${a}</H3>
+      <H3 class="datos_usuario">Ingrese la potencia en watt por hora y el tiempo en horas de uso del aparato ${a}</H3>
       <input type="number" class="valores_potencia${a} datos_usuario modificacion" placeholder="potencia">
       <input type="number" class="valores_tiempo${a} datos_usuario modificacion"  placeholder="tiempo">
       `;
@@ -40,8 +42,9 @@ function inicio() {
         voltaje1.innerHTML += resistores;
         x = x + 1;
       }
-      pantalla.textContent += potencia_total;
-      pantalla.style.fontSize = "40px";
+      potencia_pantalla.textContent += `${potencia_total}W`;
+      potencia_pantalla.style.fontSize = "30px";
+      precio.textContent += Number(((potencia_total * 0.6) / 1000).toFixed(2));
       modal.style.animation = "aparecer 2s forwards";
       modal.style.display = "flex";
     } else {
@@ -57,8 +60,9 @@ function inicio() {
 
         n++;
       }
-      pantalla.textContent += potencia_total;
-      pantalla.style.fontSize = "40px";
+      potencia_pantalla.textContent += `${potencia_total}W`;
+      potencia_pantalla.style.fontSize = "30px";
+      precio.textContent += Number(((potencia_total * 0.6) / 1000).toFixed(2));
       modal.style.animation = "aparecer 2s forwards";
       modal.style.display = "flex";
     }
