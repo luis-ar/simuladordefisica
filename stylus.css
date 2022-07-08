@@ -73,7 +73,7 @@ button {
   box-shadow: 0 0 10px 5px rgb(11, 207, 28);
 }
 body {
-  background-image: url(imagen/estrellitas.gif);
+  background-image: url(estrellitas.gif);
   background-color: rgb(170, 219, 193);
   position: relative;
   overflow-x: hidden;
