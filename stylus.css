@@ -4,12 +4,37 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 300px;
+  height: 250px;
   position: fixed;
   bottom: 100px;
   right: 80px;
 }
+.dani {
+  position: fixed;
+  bottom: 120px;
+  right: 1000px;
+  height: 190px;
+  width: 190px;
+  border: solid rgba(210, 105, 30, 0);
+  border-radius: 50px;
+}
+
+.confirmar {
+  font-family: "Press Start 2P", cursive;
+}
+.circuito-elegida {
+  font-family: "Press Start 2P", cursive;
+}
+button {
+  font-family: "Press Start 2P", cursive;
+}
+.padre {
+  font-family: "Abril Fatface", cursive;
+}
 .datos_usuario {
+  font-size: 35px;
+}
+.datos_usuario1 {
   font-size: 25px;
 }
 .imagen {
@@ -30,31 +55,32 @@
   padding-left: 20px;
   font-size: 30px;
   text-align: center;
-  background-color: red;
+  background-color: rgb(54, 214, 80);
 }
 .modificacion {
   width: 200px;
   height: 40px;
   background-color: black;
   color: white;
-  box-shadow: 0 0 10px 5px red;
+  box-shadow: 0 0 10px 5px rgb(11, 207, 28);
   margin-right: 55px;
 }
 .aparatos {
   width: 80px;
   height: 40px;
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 10px 5px red;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 254, 254);
+  box-shadow: 0 0 10px 5px rgb(11, 207, 28);
 }
 body {
-  background-color: rgb(119, 115, 115);
+  background-image: url(imagen/estrellitas.gif);
+  background-color: rgb(170, 219, 193);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .ventana1 {
-  width: 100%;
-  height: 100vh;
+  width: 100% auto;
+  height: 100% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +88,7 @@ body {
 .prueba {
   width: 120px;
   height: 140px;
-  background-color: rgb(58, 231, 58);
+  background-color: rgb(46, 175, 29);
   clip-path: polygon(
     40% 69%,
     28% 71%,
@@ -81,7 +107,7 @@ body {
 .prueba2 {
   width: 120px;
   height: 140px;
-  background-color: rgb(58, 231, 58);
+  background-color: rgb(46, 175, 29);
   clip-path: polygon(
     82% 18%,
     100% 17%,
@@ -104,15 +130,15 @@ body {
   font-size: 20px;
   background-color: rgb(127, 219, 255);
   width: 250px;
-  border: solid 5px black;
+  border: solid 5px rgb(49, 197, 86);
 }
 .variable {
   font-size: 20px;
   width: 80px;
   height: 40px;
-  background-color: black;
+  background-color: rgb(42, 209, 84);
   color: white;
-  box-shadow: 0 0 10px 5px red;
+  box-shadow: 0 0 10px 5px rgb(88, 61, 240);
 }
 .voltaje1 {
   width: 100%;
@@ -125,7 +151,7 @@ body {
   display: inline-block;
   width: 60px;
   height: 50px;
-  background-color: aqua;
+  background-color: rgb(34, 174, 57);
   margin-right: -5px;
 }
 
@@ -133,7 +159,7 @@ body {
   display: inline-block;
   width: 60px;
   height: 50px;
-  background-color: aqua;
+  background-color: rgb(157, 42, 175);
   margin-right: -5px;
 }
 
@@ -141,7 +167,7 @@ body {
   display: inline-block;
   width: 60px;
   height: 50px;
-  background-color: aqua;
+  background-color: rgb(162, 30, 158);
   margin-right: -5px;
 }
 
@@ -149,7 +175,7 @@ body {
   display: inline-block;
   width: 60px;
   height: 50px;
-  background-color: aqua;
+  background-color: rgb(135, 41, 164);
   margin-right: -5px;
 }
 
@@ -157,12 +183,12 @@ body {
   display: inline-block;
   width: 60px;
   height: 50px;
-  background-color: aqua;
+  background-color: rgb(144, 30, 148);
   margin-right: -5px;
 }
 
 .subcaja {
-  border: solid 5px black;
+  border: solid 5px rgb(32, 21, 103);
   top: -30px;
   text-align: center;
 }
@@ -172,11 +198,14 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  margin-top: 45px;
 }
+
 .ingreso_datos {
-  margin-left: 15px;
-  margin-top: 50px;
+  margin-left: 3px;
+  margin-top: 40px;
+  margin-right: 50%;
+  text-align: center;
 }
 .mensaje {
   font-size: 80px;
@@ -189,7 +218,7 @@ body {
   animation: border 2s ease-in-out infinite;
 }
 .wave {
-  color: rgb(17, 107, 224);
+  color: rgb(238, 39, 13);
   animation: wave 2s ease-in-out infinite;
 }
 @keyframes wave {
@@ -243,17 +272,16 @@ body {
   padding: 0 0px;
   width: 50%;
   position: fixed;
-  bottom: 404px;
+  bottom: 354px;
   right: 80px;
 }
 .contenedor111 {
-  width: 100%;
-  height: 80px;
+  width: auto;
+  height: auto;
   border-top: solid 7px rgb(2, 2, 2);
-
   display: flex;
-
   justify-content: center;
+  position: relative;
 }
 .cajita {
   position: relative;
@@ -280,6 +308,18 @@ body {
 .muestra_pantalla {
   position: relative;
 }
+.dani1 {
+  display: inline-block;
+}
+.mel {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  left: 200px;
+}
+.precio {
+  margin: 0%;
+}
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -296,7 +336,9 @@ body {
 }
 @keyframes reiniciar {
   0% {
+    font-size: 30px;
+    width: auto;
+    height: auto;
     opacity: 0;
-    display: none;
   }
 }
