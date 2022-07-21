@@ -44,7 +44,7 @@ function inicio() {
       }
       potencia_pantalla.textContent += `${potencia_total}W`;
       potencia_pantalla.style.fontSize = "30px";
-      precio.textContent += Number(((potencia_total * 0.6*30) ).toFixed(2));
+      precio.textContent += Number(((potencia_total * 0.6*30)/1000 ).toFixed(2));
       modal.style.animation = "aparecer 2s forwards";
       modal.style.display = "flex";
     } else {
@@ -62,7 +62,7 @@ function inicio() {
       }
       potencia_pantalla.textContent += `${potencia_total}W`;
       potencia_pantalla.style.fontSize = "30px";
-      precio.textContent += Number(((potencia_total * 0.6*30)).toFixed(2));
+      precio.textContent += Number(((potencia_total * 0.6*30)/1000).toFixed(2));
       modal.style.animation = "aparecer 2s forwards";
       modal.style.display = "flex";
     }
